@@ -1,11 +1,45 @@
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
+using PatientReferralManagementAPI.Data;
+using PatientReferralManagementAPI.Helpers;
+using PatientReferralManagementAPI.Mapping;
+using PatientReferralManagementAPI.Repositories;
+using PatientReferralManagementAPI.Services;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
-builder.Services.AddControllers();
+builder.Services.AddControllers()
+    .AddJsonOptions(options =>
+    {
+        options.JsonSerializerOptions.PropertyNamingPolicy = new SnakeCaseNamingPolicy();
+        options.JsonSerializerOptions.DictionaryKeyPolicy = new SnakeCaseNamingPolicy();
+    });
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+builder.Services.AddSwaggerGen(options =>
+{
+    options.SwaggerDoc("v1", new()
+    {
+        Title = "PatientReferralManagementAPI",
+        Version = "v1"
+    });
+});
+
+
+// DbContext
+builder.Services.AddDbContext<AppDbContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+// Repository
+builder.Services.AddScoped<IPatientRepository, PatientRepository>();
+
+// Service
+builder.Services.AddScoped<PatientService>();
+
+// AutoMapper
+builder.Services.AddAutoMapper(typeof(Program));
 
 var app = builder.Build();
 
@@ -13,7 +47,10 @@ var app = builder.Build();
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
-    app.UseSwaggerUI();
+    app.UseSwaggerUI(c =>
+    {
+        c.SwaggerEndpoint("/swagger/v1/swagger.json", "PatientReferralManagementAPI v1");
+    });
 }
 
 app.UseHttpsRedirection();
