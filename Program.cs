@@ -40,9 +40,11 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 
 // Repository
 builder.Services.AddScoped<IPatientRepository, PatientRepository>();
+builder.Services.AddScoped<IReferralRepository, ReferralRepository>();
 
 // Service
 builder.Services.AddScoped<PatientService>();
+builder.Services.AddScoped<ReferralService>();
 
 // AutoMapper
 builder.Services.AddAutoMapper(typeof(Program));

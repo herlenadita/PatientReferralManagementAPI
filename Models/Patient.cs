@@ -8,5 +8,7 @@
         public DateTime DateOfBirth { get; set; }
         public DateTime CreatedDate { get; set; } = DateTime.Now;
 
+        public ICollection<Referral> Referrals { get; set; }
+
     }
 }

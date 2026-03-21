@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using PatientReferralManagementAPI.DTO.Common;
 using PatientReferralManagementAPI.DTO.Patient;
+using PatientReferralManagementAPI.DTO.Referral;
 using PatientReferralManagementAPI.Services;
 
 namespace PatientReferralManagementAPI.Controllers
@@ -10,10 +11,12 @@ namespace PatientReferralManagementAPI.Controllers
     public class PatientsController : ControllerBase
     {
         private readonly PatientService _service;
+        private readonly ReferralService _referralService;
 
-        public PatientsController(PatientService service)
+        public PatientsController(PatientService service, ReferralService referralService)
         {
             _service = service;
+            _referralService = referralService;
         }
 
         // CREATE PATIENT
@@ -83,6 +86,19 @@ namespace PatientReferralManagementAPI.Controllers
             {
                 Success = true,
                 Message = "Patient retrieved successfully",
+                Data = result
+            });
+        }
+
+        [HttpGet("{id}/referrals")]
+        public async Task<IActionResult> GetReferralsByPatient(int id, int page = 1, int size = 10)
+        {
+            var result = await _referralService.GetByPatientIdAsync(id, page, size);
+
+            return Ok(new ApiResponse<PagedResponse<ReferralResponseDto>>
+            {
+                Success = true,
+                Message = "Referrals retrieved successfully",
                 Data = result
             });
         }
