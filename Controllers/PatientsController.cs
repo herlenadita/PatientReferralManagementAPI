@@ -18,7 +18,7 @@ namespace PatientReferralManagementAPI.Controllers
 
         // CREATE PATIENT
         [HttpPost]
-        public async Task<IActionResult> Create(CreatePatientDto dto)
+        public async Task<IActionResult> Create(CreateUpdatePatientDto dto)
         {
             var result = await _service.CreateAsync(dto);
 
@@ -29,6 +29,34 @@ namespace PatientReferralManagementAPI.Controllers
                     Message = "Patient created successfully",
                     Data = result
                 });
+        }
+
+        // UPDATE PATIENT
+        [HttpPut("{id}")]
+        public async Task<IActionResult> Update(int id, CreateUpdatePatientDto dto)
+        {
+            var result = await _service.UpdateAsync(id, dto);
+
+            return Ok(new ApiResponse<PatientResponseDto>
+            {
+                Success = true,
+                Message = "Patient updated successfully",
+                Data = result
+            });
+        }
+
+        //DELETE PATIENT
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> Delete(int id)
+        {
+            await _service.DeleteAsync(id);
+
+            return Ok(new ApiResponse<string>
+            {
+                Success = true,
+                Message = "Patient deleted successfully",
+                Data = null
+            });
         }
 
         // GET ALL (WITH PAGINATION)

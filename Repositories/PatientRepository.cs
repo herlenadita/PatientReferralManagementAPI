@@ -19,6 +19,19 @@ namespace PatientReferralManagementAPI.Repositories
             return patient;
         }
 
+        public async Task<Patient> UpdateAsync(Patient patient)
+        {
+            _context.Patients.Update(patient);
+            await _context.SaveChangesAsync();
+            return patient;
+        }
+
+        public async Task DeleteAsync(Patient patient)
+        {
+            _context.Patients.Remove(patient);
+            await _context.SaveChangesAsync();
+        }
+
         public async Task<Patient?> GetByIdAsync(int id)
         {
             return await _context.Patients.FindAsync(id);

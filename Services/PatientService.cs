@@ -18,7 +18,7 @@ namespace PatientReferralManagementAPI.Services
         }
 
         // CREATE PATIENT
-        public async Task<PatientResponseDto> CreateAsync(CreatePatientDto dto)
+        public async Task<PatientResponseDto> CreateAsync(CreateUpdatePatientDto dto)
         {
             var patient = new Patient
             {
@@ -30,6 +30,36 @@ namespace PatientReferralManagementAPI.Services
             var created = await _repo.CreateAsync(patient);
 
             return _mapper.Map<PatientResponseDto>(created);
+        }
+
+        //DELETE PATIENT
+        public async Task DeleteAsync(int id)
+        {
+            var patient = await _repo.GetByIdAsync(id);
+
+            if (patient == null)
+                throw new Exception("Patient not found");
+
+            await _repo.DeleteAsync(patient);
+        }
+
+
+        // UPDATE PATIENT
+        public async Task<PatientResponseDto> UpdateAsync(int id, CreateUpdatePatientDto dto)
+        {
+            var patient = await _repo.GetByIdAsync(id);
+
+            if (patient == null)
+                throw new Exception("Patient not found");
+
+            // update field
+            patient.FirstName = dto.FirstName;
+            patient.LastName = dto.LastName;
+            patient.DateOfBirth = dto.DateOfBirth;
+
+            var updated = await _repo.UpdateAsync(patient);
+
+            return _mapper.Map<PatientResponseDto>(updated);
         }
 
         // GET ALL (PAGINATION)

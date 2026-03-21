@@ -2,7 +2,7 @@
 using PatientReferralManagementAPI.DTO.Patient;
 namespace PatientReferralManagementAPI.Validators
 {
-    public class PatientValidator : AbstractValidator<CreatePatientDto>
+    public class PatientValidator : AbstractValidator<CreateUpdatePatientDto>
     {
         /**
          * TODO

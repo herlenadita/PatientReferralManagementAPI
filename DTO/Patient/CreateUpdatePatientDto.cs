@@ -1,6 +1,6 @@
 ﻿namespace PatientReferralManagementAPI.DTO.Patient
 {
-    public class CreatePatientDto
+    public class CreateUpdatePatientDto
     {
         public string FirstName { get; set; }
         public string LastName { get; set; }
