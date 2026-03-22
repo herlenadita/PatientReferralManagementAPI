@@ -3,6 +3,7 @@ using PatientReferralManagementAPI.DTO.Common;
 using PatientReferralManagementAPI.DTO.Referral;
 using PatientReferralManagementAPI.Models;
 using PatientReferralManagementAPI.Repositories;
+using static PatientReferralManagementAPI.Validators.Exceptions;
 
 namespace PatientReferralManagementAPI.Services
 {
@@ -35,7 +36,7 @@ namespace PatientReferralManagementAPI.Services
             if (patient == null)
             {
                 _logger.LogWarning("Patient not found: {PatientId}", dto.PatientId);
-                throw new Exception("Patient not found");
+                throw new NotFoundException("Patient not found");
             }
 
             var referral = new Referral
@@ -64,7 +65,7 @@ namespace PatientReferralManagementAPI.Services
             if (referral == null)
             {
                 _logger.LogWarning("Referral not found with ID: {ReferralId}", id);
-                throw new Exception("Referral not found");
+                throw new NotFoundException("Referral not found");
             }
 
             _logger.LogInformation("Referral found with ID: {ReferralId}", id);
@@ -72,12 +73,19 @@ namespace PatientReferralManagementAPI.Services
             return _mapper.Map<ReferralResponseDto>(referral);
         }
 
-        // GET ALL (PAGINATION)
+        // GET ALL REFERRALS BY PATIENT ID (PAGINATION)
         public async Task<PagedResponse<ReferralResponseDto>> GetByPatientIdAsync(int patientId, int page, int size)
         {
             _logger.LogInformation(
                 "Fetching referrals for PatientId: {PatientId}, Page: {Page}, Size: {Size}",
                 patientId, page, size);
+
+            var patient = await _patientRepo.GetByIdAsync(patientId);
+            if (patient == null)
+            {
+                _logger.LogWarning("Patient not found: {PatientId}", patientId);
+                throw new NotFoundException("Patient not found");
+            }
 
             var data = await _repo.GetByPatientIdAsync(patientId, page, size);
             var total = await _repo.CountByPatientIdAsync(patientId);
@@ -126,7 +134,7 @@ namespace PatientReferralManagementAPI.Services
             if (referral == null)
             {
                 _logger.LogWarning("Referral not found for update. ID: {ReferralId}", id);
-                throw new Exception("Referral not found");
+                throw new NotFoundException("Referral not found");
             }
 
             referral.ReferralSource = dto.ReferralSource;
@@ -150,7 +158,7 @@ namespace PatientReferralManagementAPI.Services
             if (referral == null)
             {
                 _logger.LogWarning("Referral not found for deletion. ID: {ReferralId}", id);
-                throw new Exception("Referral not found");
+                throw new NotFoundException("Referral not found");
             }
 
             await _repo.DeleteAsync(referral);

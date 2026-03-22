@@ -1,9 +1,9 @@
 ﻿using AutoMapper;
-using Microsoft.AspNetCore.Http.HttpResults;
 using PatientReferralManagementAPI.DTO.Common;
 using PatientReferralManagementAPI.DTO.Patient;
 using PatientReferralManagementAPI.Models;
 using PatientReferralManagementAPI.Repositories;
+using static PatientReferralManagementAPI.Validators.Exceptions;
 
 namespace PatientReferralManagementAPI.Services
 {
@@ -11,12 +11,12 @@ namespace PatientReferralManagementAPI.Services
     {
         private readonly IPatientRepository _repo;
         private readonly IMapper _mapper;
-        private readonly ILogger<ReferralService> _logger;
+        private readonly ILogger<PatientService> _logger;
 
         public PatientService(
             IPatientRepository repo, 
             IMapper mapper,
-            ILogger<ReferralService> logger)
+            ILogger<PatientService> logger)
         {
             _repo = repo;
             _mapper = mapper;
@@ -31,7 +31,7 @@ namespace PatientReferralManagementAPI.Services
             {
                 FirstName = dto.FirstName,
                 LastName = dto.LastName,
-                DateOfBirth = dto.DateOfBirth
+                DateOfBirth = DateTime.Parse(dto.DateOfBirth)
             };
 
             var created = await _repo.CreateAsync(patient);
@@ -51,7 +51,7 @@ namespace PatientReferralManagementAPI.Services
             if (patient == null)
             {
                 _logger.LogWarning("Patient not found: {PatientId}", id);
-                throw new Exception("Patient not found");
+                throw new NotFoundException("Patient not found");
             }
 
             await _repo.DeleteAsync(patient);
@@ -70,13 +70,13 @@ namespace PatientReferralManagementAPI.Services
             if (patient == null)
             {
                 _logger.LogWarning("Patient not found: {PatientId}", id);
-                throw new Exception("Patient not found");
+                throw new NotFoundException("Patient not found");
             }
 
             // update field
             patient.FirstName = dto.FirstName;
             patient.LastName = dto.LastName;
-            patient.DateOfBirth = dto.DateOfBirth;
+            patient.DateOfBirth = DateTime.Parse(dto.DateOfBirth);
 
             var updated = await _repo.UpdateAsync(patient);
 
@@ -116,7 +116,7 @@ namespace PatientReferralManagementAPI.Services
             if (patient == null)
             {
                 _logger.LogWarning("Patient not found with ID: {PatientId}", id);
-                throw new Exception("Patient not found");
+                throw new NotFoundException("Patient not found");
             }
 
             _logger.LogInformation("Patient found with ID: {PatientId}", id);

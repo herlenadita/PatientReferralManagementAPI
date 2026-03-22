@@ -1,7 +1,9 @@
 ﻿using FluentValidation;
 using FluentValidation.AspNetCore;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using PatientReferralManagementAPI.Data;
+using PatientReferralManagementAPI.DTO.Common;
 using PatientReferralManagementAPI.Helpers;
 using PatientReferralManagementAPI.Repositories;
 using PatientReferralManagementAPI.Services;
@@ -19,9 +21,6 @@ builder.Services.AddControllers()
         options.JsonSerializerOptions.PropertyNamingPolicy = new SnakeCaseNamingPolicy();
         options.JsonSerializerOptions.DictionaryKeyPolicy = new SnakeCaseNamingPolicy();
     });
-
-builder.Services.AddFluentValidationAutoValidation();
-builder.Services.AddValidatorsFromAssemblyContaining<CreateUpdatePatientValidator>();
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
@@ -50,6 +49,11 @@ builder.Services.AddScoped<ReferralService>();
 // AutoMapper
 builder.Services.AddAutoMapper(typeof(Program));
 
+// Validation
+builder.Services.AddFluentValidationAutoValidation();
+builder.Services.AddValidatorsFromAssemblyContaining<CreateUpdatePatientValidator>();
+builder.Services.AddCustomValidation();
+
 // Logging with Serilog
 Log.Logger = new LoggerConfiguration()
     .MinimumLevel.Information()
@@ -73,6 +77,8 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+app.UseMiddleware<ExceptionMiddleware>();
 
 app.UseAuthorization();
 

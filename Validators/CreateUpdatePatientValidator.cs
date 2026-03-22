@@ -1,5 +1,6 @@
 ﻿using FluentValidation;
 using PatientReferralManagementAPI.DTO.Patient;
+using System.Globalization;
 namespace PatientReferralManagementAPI.Validators
 {
     public class CreateUpdatePatientValidator : AbstractValidator<CreateUpdatePatientDto>
@@ -26,7 +27,27 @@ namespace PatientReferralManagementAPI.Validators
             // DateOfBirth
             RuleFor(x => x.DateOfBirth)
                 .NotEmpty().WithMessage("Date of birth is required")
-                .Must(d => d.Date <= DateTime.Today)
+
+                .Must(date => DateTime.TryParseExact(
+                    date,
+                    "yyyy-MM-dd",
+                    CultureInfo.InvariantCulture,
+                    DateTimeStyles.None,
+                    out _))
+                .WithMessage("Date of birth must be in format yyyy-MM-dd")
+
+                .Must(date =>
+                {
+                    if (!DateTime.TryParseExact(
+                        date,
+                        "yyyy-MM-dd",
+                        CultureInfo.InvariantCulture,
+                        DateTimeStyles.None,
+                        out var parsedDate))
+                        return true;
+
+                    return parsedDate.Date <= DateTime.Today;
+                })
                 .WithMessage("Date of birth cannot be in the future");
         }
 
