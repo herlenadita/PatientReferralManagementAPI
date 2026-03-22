@@ -43,5 +43,47 @@ namespace PatientReferralManagementAPI.Controllers
                 Data = result
             });
         }
+
+        // GET ALL 
+        [HttpGet]
+        public async Task<IActionResult> GetAll(int page = 1, int size = 10)
+        {
+            var result = await _service.GetAllAsync(page, size);
+
+            return Ok(new ApiResponse<PagedResponse<ReferralResponseDto>>
+            {
+                Success = true,
+                Message = "Referrals retrieved successfully",
+                Data = result
+            });
+        }
+
+        // UPDATE
+        [HttpPut("{id}")]
+        public async Task<IActionResult> Update(int id, UpdateReferralDto dto)
+        {
+            var result = await _service.UpdateAsync(id, dto);
+
+            return Ok(new ApiResponse<ReferralResponseDto>
+            {
+                Success = true,
+                Message = "Referral updated successfully",
+                Data = result
+            });
+        }
+
+        // DELETE
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> Delete(int id)
+        {
+            await _service.DeleteAsync(id);
+
+            return Ok(new ApiResponse<string>
+            {
+                Success = true,
+                Message = "Referral deleted successfully",
+                Data = null
+            });
+        }
     }
 }

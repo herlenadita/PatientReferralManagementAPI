@@ -40,5 +40,32 @@ namespace PatientReferralManagementAPI.Repositories
             return await _context.Referrals
                 .CountAsync(x => x.PatientId == patientId);
         }
+
+        public async Task<IEnumerable<Referral>> GetAllAsync(int page, int size)
+        {
+            return await _context.Referrals
+                .OrderByDescending(x => x.CreatedDate)
+                .Skip((page - 1) * size)
+                .Take(size)
+                .ToListAsync();
+        }
+
+        public async Task<int> CountAsync()
+        {
+            return await _context.Referrals.CountAsync();
+        }
+
+        public async Task<Referral> UpdateAsync(Referral referral)
+        {
+            _context.Referrals.Update(referral);
+            await _context.SaveChangesAsync();
+            return referral;
+        }
+
+        public async Task DeleteAsync(Referral referral)
+        {
+            _context.Referrals.Remove(referral);
+            await _context.SaveChangesAsync();
+        }
     }
 }

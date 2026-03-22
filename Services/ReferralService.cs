@@ -72,5 +72,51 @@ namespace PatientReferralManagementAPI.Services
                 Total = total
             };
         }
+
+        // GET ALL + PAGINATION
+        public async Task<PagedResponse<ReferralResponseDto>> GetAllAsync(int page, int size)
+        {
+            var data = await _repo.GetAllAsync(page, size);
+            var total = await _repo.CountAsync();
+
+            var mapped = _mapper.Map<IEnumerable<ReferralResponseDto>>(data);
+
+            return new PagedResponse<ReferralResponseDto>
+            {
+                Data = mapped,
+                Page = page,
+                Size = size,
+                Total = total
+            };
+        }
+
+        //UPDATE REFERRAL
+        public async Task<ReferralResponseDto> UpdateAsync(int id, UpdateReferralDto dto)
+        {
+            var referral = await _repo.GetByIdAsync(id);
+
+            if (referral == null)
+                throw new Exception("Referral not found");
+
+            referral.ReferralSource = dto.ReferralSource;
+            referral.ReferralType = dto.ReferralType;
+            referral.ReferralNote = dto.ReferralNote;
+
+            var updated = await _repo.UpdateAsync(referral);
+
+            return _mapper.Map<ReferralResponseDto>(updated);
+        }
+
+        // DELETE REFERRAL
+        public async Task DeleteAsync(int id)
+        {
+            var referral = await _repo.GetByIdAsync(id);
+
+            if (referral == null)
+                throw new Exception("Referral not found");
+
+            await _repo.DeleteAsync(referral);
+        }
+
     }
 }
