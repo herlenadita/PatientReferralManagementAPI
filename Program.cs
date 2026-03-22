@@ -6,6 +6,7 @@ using PatientReferralManagementAPI.Helpers;
 using PatientReferralManagementAPI.Repositories;
 using PatientReferralManagementAPI.Services;
 using PatientReferralManagementAPI.Validators;
+using Serilog;
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -49,6 +50,16 @@ builder.Services.AddScoped<ReferralService>();
 // AutoMapper
 builder.Services.AddAutoMapper(typeof(Program));
 
+// Logging with Serilog
+Log.Logger = new LoggerConfiguration()
+    .MinimumLevel.Information()
+    //.MinimumLevel.Override("Microsoft.EntityFrameworkCore.Database.Command", Serilog.Events.LogEventLevel.Warning)
+    .WriteTo.Console()
+    .WriteTo.File("logs/log-.txt", rollingInterval: RollingInterval.Day)
+    .CreateLogger();
+
+builder.Host.UseSerilog();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -66,5 +77,7 @@ app.UseHttpsRedirection();
 app.UseAuthorization();
 
 app.MapControllers();
+
+app.UseSerilogRequestLogging();
 
 app.Run();
