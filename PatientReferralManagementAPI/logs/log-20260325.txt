@@ -1,0 +1,51 @@
+2026-03-25 21:05:35.111 +07:00 [INF] Now listening on: http://localhost:5132
+2026-03-25 21:05:35.661 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-03-25 21:05:35.669 +07:00 [INF] Hosting environment: Development
+2026-03-25 21:05:35.679 +07:00 [INF] Content root path: D:\work\bitbybit\project\coding-test\PatientReferralManagementAPI\PatientReferralManagementAPI
+2026-03-25 21:05:37.290 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5132/swagger/index.html - null null
+2026-03-25 21:05:38.053 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5132/swagger/index.html - 304 null null 818.794ms
+2026-03-25 21:05:38.094 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5132/_framework/aspnetcore-browser-refresh.js - null null
+2026-03-25 21:05:38.094 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5132/swagger/index.css - null null
+2026-03-25 21:05:38.116 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5132/swagger/swagger-ui-standalone-preset.js - null null
+2026-03-25 21:05:38.171 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5132/_framework/aspnetcore-browser-refresh.js - 200 16541 application/javascript; charset=utf-8 77.5474ms
+2026-03-25 21:05:38.096 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5132/swagger/swagger-ui-bundle.js - null null
+2026-03-25 21:05:38.094 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5132/swagger/swagger-ui.css - null null
+2026-03-25 21:05:38.133 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5132/swagger/index.js - null null
+2026-03-25 21:05:38.325 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5132/swagger/index.css - 304 null null 233.2554ms
+2026-03-25 21:05:38.325 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5132/swagger/swagger-ui-standalone-preset.js - 304 null null 220.6987ms
+2026-03-25 21:05:38.282 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5132/_vs/browserLink - null null
+2026-03-25 21:05:38.374 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5132/swagger/swagger-ui-bundle.js - 304 null null 277.7292ms
+2026-03-25 21:05:38.325 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5132/swagger/swagger-ui.css - 304 null null 234.0747ms
+2026-03-25 21:05:38.443 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5132/_vs/browserLink - 404 0 null 160.7429ms
+2026-03-25 21:05:38.369 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5132/swagger/index.js - 304 null null 236.0048ms
+2026-03-25 21:05:39.614 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5132/swagger/v1/swagger.json - null null
+2026-03-25 21:05:39.698 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5132/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 84.789ms
+2026-03-25 21:33:34.491 +07:00 [INF] Now listening on: http://localhost:5132
+2026-03-25 21:33:34.660 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-03-25 21:33:34.662 +07:00 [INF] Hosting environment: Development
+2026-03-25 21:33:34.667 +07:00 [INF] Content root path: D:\work\bitbybit\project\coding-test\PatientReferralManagementAPI\PatientReferralManagementAPI
+2026-03-25 21:33:36.166 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5132/swagger/index.html - null null
+2026-03-25 21:33:36.586 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5132/swagger/index.html - 304 null null 438.7667ms
+2026-03-25 21:33:36.632 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5132/swagger/swagger-ui.css - null null
+2026-03-25 21:33:36.630 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5132/_framework/aspnetcore-browser-refresh.js - null null
+2026-03-25 21:33:36.633 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5132/swagger/index.css - null null
+2026-03-25 21:33:36.634 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5132/swagger/swagger-ui-bundle.js - null null
+2026-03-25 21:33:36.630 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5132/swagger/swagger-ui-standalone-preset.js - null null
+2026-03-25 21:33:36.642 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5132/swagger/index.js - null null
+2026-03-25 21:33:36.876 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5132/swagger/swagger-ui.css - 304 null null 248.7847ms
+2026-03-25 21:33:36.877 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5132/_framework/aspnetcore-browser-refresh.js - 200 16541 application/javascript; charset=utf-8 248.528ms
+2026-03-25 21:33:36.887 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5132/swagger/index.css - 304 null null 259.7344ms
+2026-03-25 21:33:36.935 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5132/swagger/swagger-ui-bundle.js - 304 null null 306.0903ms
+2026-03-25 21:33:36.925 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5132/swagger/swagger-ui-standalone-preset.js - 304 null null 295.3898ms
+2026-03-25 21:33:37.049 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5132/_vs/browserLink - null null
+2026-03-25 21:33:36.926 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5132/swagger/index.js - 304 null null 284.9037ms
+2026-03-25 21:33:37.168 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5132/_vs/browserLink - 404 0 null 119.6236ms
+2026-03-25 21:33:37.253 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5132/swagger/v1/swagger.json - null null
+2026-03-25 21:33:37.330 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5132/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 77.5162ms
+2026-03-25 21:33:39.552 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5132/swagger/v1/swagger.json - null null
+2026-03-25 21:33:39.628 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5132/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 76.1072ms
+2026-03-25 21:33:39.717 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5132/favicon.ico - null null
+2026-03-25 21:33:39.753 +07:00 [WRN] Failed to determine the https port for redirect.
+2026-03-25 21:33:39.828 +07:00 [INF] HTTP GET /favicon.ico responded 404 in 8.7590 ms
+2026-03-25 21:33:39.846 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5132/favicon.ico - 404 0 null 129.8168ms
+2026-03-25 21:33:39.877 +07:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5132/favicon.ico, Response status code: 404
