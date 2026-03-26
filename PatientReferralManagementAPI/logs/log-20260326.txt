@@ -1,0 +1,187 @@
+2026-03-26 13:43:07.562 +07:00 [INF] Now listening on: http://localhost:5132
+2026-03-26 13:43:07.741 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-03-26 13:43:07.742 +07:00 [INF] Hosting environment: Development
+2026-03-26 13:43:07.743 +07:00 [INF] Content root path: D:\work\bitbybit\project\coding-test\PatientReferralManagementAPI\PatientReferralManagementAPI
+2026-03-26 13:43:09.461 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5132/swagger/index.html - null null
+2026-03-26 13:43:09.743 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5132/swagger/index.html - 304 null null 301.391ms
+2026-03-26 13:43:09.787 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5132/swagger/index.css - null null
+2026-03-26 13:43:09.787 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5132/_framework/aspnetcore-browser-refresh.js - null null
+2026-03-26 13:43:09.789 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5132/swagger/swagger-ui-standalone-preset.js - null null
+2026-03-26 13:43:09.863 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5132/_framework/aspnetcore-browser-refresh.js - 200 16541 application/javascript; charset=utf-8 94.1172ms
+2026-03-26 13:43:09.782 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5132/swagger/swagger-ui.css - null null
+2026-03-26 13:43:09.782 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5132/swagger/swagger-ui-bundle.js - null null
+2026-03-26 13:43:09.790 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5132/swagger/index.js - null null
+2026-03-26 13:43:09.883 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5132/swagger/index.css - 304 null null 114.8934ms
+2026-03-26 13:43:09.883 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5132/swagger/swagger-ui-standalone-preset.js - 304 null null 95.1484ms
+2026-03-26 13:43:09.888 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5132/swagger/swagger-ui.css - 304 null null 119.1016ms
+2026-03-26 13:43:09.913 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5132/swagger/swagger-ui-bundle.js - 304 null null 140.0533ms
+2026-03-26 13:43:09.897 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5132/swagger/index.js - 304 null null 106.907ms
+2026-03-26 13:43:10.019 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5132/swagger/v1/swagger.json - null null
+2026-03-26 13:43:10.062 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5132/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 43.7584ms
+2026-03-26 13:53:20.489 +07:00 [INF] Now listening on: http://localhost:5132
+2026-03-26 13:53:20.592 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-03-26 13:53:20.594 +07:00 [INF] Hosting environment: Development
+2026-03-26 13:53:20.595 +07:00 [INF] Content root path: D:\work\bitbybit\project\coding-test\PatientReferralManagementAPI\PatientReferralManagementAPI
+2026-03-26 13:53:22.419 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5132/swagger/index.html - null null
+2026-03-26 13:53:22.710 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5132/swagger/index.html - 304 null null 304.9812ms
+2026-03-26 13:53:22.733 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5132/swagger/index.css - null null
+2026-03-26 13:53:22.732 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5132/swagger/swagger-ui-bundle.js - null null
+2026-03-26 13:53:22.733 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5132/swagger/swagger-ui.css - null null
+2026-03-26 13:53:22.812 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5132/swagger/swagger-ui.css - 304 null null 78.4511ms
+2026-03-26 13:53:22.813 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5132/swagger/index.css - 304 null null 81.2933ms
+2026-03-26 13:53:22.816 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5132/swagger/swagger-ui-bundle.js - 304 null null 84.6488ms
+2026-03-26 13:53:22.831 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5132/_framework/aspnetcore-browser-refresh.js - null null
+2026-03-26 13:53:22.840 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5132/swagger/index.js - null null
+2026-03-26 13:53:22.845 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5132/swagger/swagger-ui-standalone-preset.js - null null
+2026-03-26 13:53:22.854 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5132/_framework/aspnetcore-browser-refresh.js - 200 16541 application/javascript; charset=utf-8 22.1689ms
+2026-03-26 13:53:22.863 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5132/swagger/index.js - 304 null null 22.6389ms
+2026-03-26 13:53:22.870 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5132/swagger/swagger-ui-standalone-preset.js - 304 null null 25.4325ms
+2026-03-26 13:53:23.220 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5132/swagger/v1/swagger.json - null null
+2026-03-26 13:53:23.266 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5132/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 46.8775ms
+2026-03-26 13:53:53.912 +07:00 [INF] Request starting HTTP/1.1 POST http://localhost:5132/api/patients - application/json 81
+2026-03-26 13:53:53.960 +07:00 [WRN] Failed to determine the https port for redirect.
+2026-03-26 13:53:53.977 +07:00 [INF] Executing endpoint 'PatientReferralManagementAPI.Controllers.PatientsController.Create (PatientReferralManagementAPI)'
+2026-03-26 13:53:54.045 +07:00 [INF] Route matched with {action = "Create", controller = "Patients"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(PatientReferralManagementAPI.DTO.Patient.CreateUpdatePatientDto) on controller PatientReferralManagementAPI.Controllers.PatientsController (PatientReferralManagementAPI).
+2026-03-26 13:53:54.815 +07:00 [INF] Creating patient
+2026-03-26 13:53:57.687 +07:00 [INF] Executed DbCommand (185ms) [Parameters=[@p0='?' (DbType = DateTime2), @p1='?' (DbType = DateTime2), @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [patient] ([created_date], [date_of_birth], [first_name], [last_name], [updated_date])
+OUTPUT INSERTED.[patient_id]
+VALUES (@p0, @p1, @p2, @p3, @p4);
+2026-03-26 13:53:57.786 +07:00 [INF] Patient created with ID 5
+2026-03-26 13:53:57.848 +07:00 [INF] Executing CreatedAtActionResult, writing value of type 'PatientReferralManagementAPI.DTO.Common.ApiResponse`1[[PatientReferralManagementAPI.DTO.Patient.PatientResponseDto, PatientReferralManagementAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-03-26 13:53:57.909 +07:00 [INF] Executed action PatientReferralManagementAPI.Controllers.PatientsController.Create (PatientReferralManagementAPI) in 3848.5336ms
+2026-03-26 13:53:57.913 +07:00 [INF] Executed endpoint 'PatientReferralManagementAPI.Controllers.PatientsController.Create (PatientReferralManagementAPI)'
+2026-03-26 13:53:57.918 +07:00 [INF] HTTP POST /api/patients responded 201 in 3943.9142 ms
+2026-03-26 13:53:57.946 +07:00 [INF] Request finished HTTP/1.1 POST http://localhost:5132/api/patients - 201 null application/json; charset=utf-8 4033.8179ms
+2026-03-26 14:01:22.890 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5132/api/patients?page=1&size=10 - null null
+2026-03-26 14:01:22.902 +07:00 [INF] Executing endpoint 'PatientReferralManagementAPI.Controllers.PatientsController.GetAll (PatientReferralManagementAPI)'
+2026-03-26 14:01:22.911 +07:00 [INF] Route matched with {action = "GetAll", controller = "Patients"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll(Int32, Int32) on controller PatientReferralManagementAPI.Controllers.PatientsController (PatientReferralManagementAPI).
+2026-03-26 14:01:22.936 +07:00 [INF] Fetching patients. Page: 1, Size: 10
+2026-03-26 14:01:23.768 +07:00 [INF] Executed DbCommand (18ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[patient_id], [p].[created_date], [p].[date_of_birth], [p].[first_name], [p].[last_name], [p].[updated_date]
+FROM [patient] AS [p]
+ORDER BY [p].[patient_id]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2026-03-26 14:01:23.920 +07:00 [INF] Executed DbCommand (12ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [patient] AS [p]
+2026-03-26 14:01:23.935 +07:00 [INF] Fetched 2 patients from database (Total: 2)
+2026-03-26 14:01:23.968 +07:00 [INF] Executing OkObjectResult, writing value of type 'PatientReferralManagementAPI.DTO.Common.ApiResponse`1[[PatientReferralManagementAPI.DTO.Common.PagedResponse`1[[PatientReferralManagementAPI.DTO.Patient.PatientResponseDto, PatientReferralManagementAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], PatientReferralManagementAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-03-26 14:01:23.985 +07:00 [INF] Executed action PatientReferralManagementAPI.Controllers.PatientsController.GetAll (PatientReferralManagementAPI) in 1071.8812ms
+2026-03-26 14:01:23.991 +07:00 [INF] Executed endpoint 'PatientReferralManagementAPI.Controllers.PatientsController.GetAll (PatientReferralManagementAPI)'
+2026-03-26 14:01:23.994 +07:00 [INF] HTTP GET /api/patients responded 200 in 1091.4089 ms
+2026-03-26 14:01:23.999 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5132/api/patients?page=1&size=10 - 200 null application/json; charset=utf-8 1108.7428ms
+2026-03-26 14:06:21.556 +07:00 [INF] Request starting HTTP/1.1 POST http://localhost:5132/api/patients - application/json 64
+2026-03-26 14:06:21.576 +07:00 [INF] Executing endpoint 'PatientReferralManagementAPI.Controllers.PatientsController.Create (PatientReferralManagementAPI)'
+2026-03-26 14:06:21.583 +07:00 [INF] Route matched with {action = "Create", controller = "Patients"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(PatientReferralManagementAPI.DTO.Patient.CreateUpdatePatientDto) on controller PatientReferralManagementAPI.Controllers.PatientsController (PatientReferralManagementAPI).
+2026-03-26 14:06:21.638 +07:00 [INF] Executing BadRequestObjectResult, writing value of type 'PatientReferralManagementAPI.DTO.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-03-26 14:06:21.673 +07:00 [INF] Executed action PatientReferralManagementAPI.Controllers.PatientsController.Create (PatientReferralManagementAPI) in 78.7082ms
+2026-03-26 14:06:21.677 +07:00 [INF] Executed endpoint 'PatientReferralManagementAPI.Controllers.PatientsController.Create (PatientReferralManagementAPI)'
+2026-03-26 14:06:21.680 +07:00 [INF] HTTP POST /api/patients responded 400 in 103.7474 ms
+2026-03-26 14:06:21.683 +07:00 [INF] Request finished HTTP/1.1 POST http://localhost:5132/api/patients - 400 null application/json; charset=utf-8 128.3419ms
+2026-03-26 14:09:05.651 +07:00 [INF] Request starting HTTP/1.1 POST http://localhost:5132/api/patients - application/json 91
+2026-03-26 14:09:05.670 +07:00 [INF] Executing endpoint 'PatientReferralManagementAPI.Controllers.PatientsController.Create (PatientReferralManagementAPI)'
+2026-03-26 14:09:05.673 +07:00 [INF] Route matched with {action = "Create", controller = "Patients"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(PatientReferralManagementAPI.DTO.Patient.CreateUpdatePatientDto) on controller PatientReferralManagementAPI.Controllers.PatientsController (PatientReferralManagementAPI).
+2026-03-26 14:09:05.686 +07:00 [INF] Executing BadRequestObjectResult, writing value of type 'PatientReferralManagementAPI.DTO.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-03-26 14:09:05.695 +07:00 [INF] Executed action PatientReferralManagementAPI.Controllers.PatientsController.Create (PatientReferralManagementAPI) in 14.5745ms
+2026-03-26 14:09:05.700 +07:00 [INF] Executed endpoint 'PatientReferralManagementAPI.Controllers.PatientsController.Create (PatientReferralManagementAPI)'
+2026-03-26 14:09:05.708 +07:00 [INF] HTTP POST /api/patients responded 400 in 37.8162 ms
+2026-03-26 14:09:05.712 +07:00 [INF] Request finished HTTP/1.1 POST http://localhost:5132/api/patients - 400 null application/json; charset=utf-8 61.5725ms
+2026-03-26 14:10:35.655 +07:00 [INF] Request starting HTTP/1.1 POST http://localhost:5132/api/patients - application/json 64
+2026-03-26 14:10:35.668 +07:00 [INF] Executing endpoint 'PatientReferralManagementAPI.Controllers.PatientsController.Create (PatientReferralManagementAPI)'
+2026-03-26 14:10:35.671 +07:00 [INF] Route matched with {action = "Create", controller = "Patients"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(PatientReferralManagementAPI.DTO.Patient.CreateUpdatePatientDto) on controller PatientReferralManagementAPI.Controllers.PatientsController (PatientReferralManagementAPI).
+2026-03-26 14:10:35.679 +07:00 [INF] Executing BadRequestObjectResult, writing value of type 'PatientReferralManagementAPI.DTO.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-03-26 14:10:35.696 +07:00 [INF] Executed action PatientReferralManagementAPI.Controllers.PatientsController.Create (PatientReferralManagementAPI) in 19.0399ms
+2026-03-26 14:10:35.700 +07:00 [INF] Executed endpoint 'PatientReferralManagementAPI.Controllers.PatientsController.Create (PatientReferralManagementAPI)'
+2026-03-26 14:10:35.703 +07:00 [INF] HTTP POST /api/patients responded 400 in 34.4984 ms
+2026-03-26 14:10:35.707 +07:00 [INF] Request finished HTTP/1.1 POST http://localhost:5132/api/patients - 400 null application/json; charset=utf-8 52.268ms
+2026-03-26 14:12:16.507 +07:00 [INF] Request starting HTTP/1.1 POST http://localhost:5132/api/referrals - application/json 156
+2026-03-26 14:12:16.547 +07:00 [INF] Executing endpoint 'PatientReferralManagementAPI.Controllers.ReferralsController.Create (PatientReferralManagementAPI)'
+2026-03-26 14:12:16.582 +07:00 [INF] Route matched with {action = "Create", controller = "Referrals"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(PatientReferralManagementAPI.DTO.Referral.CreateReferralDto) on controller PatientReferralManagementAPI.Controllers.ReferralsController (PatientReferralManagementAPI).
+2026-03-26 14:12:16.642 +07:00 [INF] Creating referral for patient 23
+2026-03-26 14:12:16.792 +07:00 [INF] Executed DbCommand (11ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[patient_id], [p].[created_date], [p].[date_of_birth], [p].[first_name], [p].[last_name], [p].[updated_date]
+FROM [patient] AS [p]
+WHERE [p].[patient_id] = @__p_0
+2026-03-26 14:12:16.809 +07:00 [WRN] Patient not found: 23
+2026-03-26 14:12:17.073 +07:00 [INF] Executed action PatientReferralManagementAPI.Controllers.ReferralsController.Create (PatientReferralManagementAPI) in 486.6246ms
+2026-03-26 14:12:17.098 +07:00 [INF] Executed endpoint 'PatientReferralManagementAPI.Controllers.ReferralsController.Create (PatientReferralManagementAPI)'
+2026-03-26 14:12:17.101 +07:00 [ERR] HTTP POST /api/referrals responded 500 in 554.0646 ms
+PatientReferralManagementAPI.Validators.Exceptions+NotFoundException: Patient not found
+   at PatientReferralManagementAPI.Services.ReferralService.CreateAsync(CreateReferralDto dto) in D:\work\bitbybit\project\coding-test\PatientReferralManagementAPI\PatientReferralManagementAPI\Services\ReferralService.cs:line 39
+   at PatientReferralManagementAPI.Controllers.ReferralsController.Create(CreateReferralDto dto) in D:\work\bitbybit\project\coding-test\PatientReferralManagementAPI\PatientReferralManagementAPI\Controllers\ReferralsController.cs:line 25
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2026-03-26 14:12:17.449 +07:00 [WRN] Patient not found
+PatientReferralManagementAPI.Validators.Exceptions+NotFoundException: Patient not found
+   at PatientReferralManagementAPI.Services.ReferralService.CreateAsync(CreateReferralDto dto) in D:\work\bitbybit\project\coding-test\PatientReferralManagementAPI\PatientReferralManagementAPI\Services\ReferralService.cs:line 39
+   at PatientReferralManagementAPI.Controllers.ReferralsController.Create(CreateReferralDto dto) in D:\work\bitbybit\project\coding-test\PatientReferralManagementAPI\PatientReferralManagementAPI\Controllers\ReferralsController.cs:line 25
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at PatientReferralManagementAPI.Validators.ExceptionMiddleware.Invoke(HttpContext context) in D:\work\bitbybit\project\coding-test\PatientReferralManagementAPI\PatientReferralManagementAPI\Validators\ExceptionMiddleware.cs:line 27
+2026-03-26 14:12:25.090 +07:00 [INF] Request finished HTTP/1.1 POST http://localhost:5132/api/referrals - 404 null application/json 8583.1819ms
+2026-03-26 14:12:32.771 +07:00 [INF] Request starting HTTP/1.1 POST http://localhost:5132/api/referrals - application/json 156
+2026-03-26 14:12:32.782 +07:00 [INF] Executing endpoint 'PatientReferralManagementAPI.Controllers.ReferralsController.Create (PatientReferralManagementAPI)'
+2026-03-26 14:12:32.786 +07:00 [INF] Route matched with {action = "Create", controller = "Referrals"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(PatientReferralManagementAPI.DTO.Referral.CreateReferralDto) on controller PatientReferralManagementAPI.Controllers.ReferralsController (PatientReferralManagementAPI).
+2026-03-26 14:12:32.888 +07:00 [INF] Creating referral for patient 23
+2026-03-26 14:12:32.928 +07:00 [INF] Executed DbCommand (12ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[patient_id], [p].[created_date], [p].[date_of_birth], [p].[first_name], [p].[last_name], [p].[updated_date]
+FROM [patient] AS [p]
+WHERE [p].[patient_id] = @__p_0
+2026-03-26 14:12:32.943 +07:00 [WRN] Patient not found: 23
+2026-03-26 14:12:32.995 +07:00 [INF] Executed action PatientReferralManagementAPI.Controllers.ReferralsController.Create (PatientReferralManagementAPI) in 117.386ms
+2026-03-26 14:12:32.998 +07:00 [INF] Executed endpoint 'PatientReferralManagementAPI.Controllers.ReferralsController.Create (PatientReferralManagementAPI)'
+2026-03-26 14:12:33.001 +07:00 [ERR] HTTP POST /api/referrals responded 500 in 218.8144 ms
+PatientReferralManagementAPI.Validators.Exceptions+NotFoundException: Patient not found
+   at PatientReferralManagementAPI.Services.ReferralService.CreateAsync(CreateReferralDto dto) in D:\work\bitbybit\project\coding-test\PatientReferralManagementAPI\PatientReferralManagementAPI\Services\ReferralService.cs:line 39
+   at PatientReferralManagementAPI.Controllers.ReferralsController.Create(CreateReferralDto dto) in D:\work\bitbybit\project\coding-test\PatientReferralManagementAPI\PatientReferralManagementAPI\Controllers\ReferralsController.cs:line 25
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2026-03-26 14:12:33.051 +07:00 [WRN] Patient not found
+PatientReferralManagementAPI.Validators.Exceptions+NotFoundException: Patient not found
+   at PatientReferralManagementAPI.Services.ReferralService.CreateAsync(CreateReferralDto dto) in D:\work\bitbybit\project\coding-test\PatientReferralManagementAPI\PatientReferralManagementAPI\Services\ReferralService.cs:line 39
+   at PatientReferralManagementAPI.Controllers.ReferralsController.Create(CreateReferralDto dto) in D:\work\bitbybit\project\coding-test\PatientReferralManagementAPI\PatientReferralManagementAPI\Controllers\ReferralsController.cs:line 25
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at PatientReferralManagementAPI.Validators.ExceptionMiddleware.Invoke(HttpContext context) in D:\work\bitbybit\project\coding-test\PatientReferralManagementAPI\PatientReferralManagementAPI\Validators\ExceptionMiddleware.cs:line 27
+2026-03-26 14:12:33.062 +07:00 [INF] Request finished HTTP/1.1 POST http://localhost:5132/api/referrals - 404 null application/json 291.1218ms
