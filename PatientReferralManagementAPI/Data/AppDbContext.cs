@@ -37,12 +37,41 @@ namespace PatientReferralManagementAPI.Data
                 entity.Property(e => e.ReferralType).HasColumnName("referral_type");
                 entity.Property(e => e.ReferralNote).HasColumnName("referral_note");
                 entity.Property(e => e.CreatedDate).HasColumnName("created_date");
-                entity.Property(e => e.CreatedDate).HasColumnName("updated_date");
+                entity.Property(e => e.UpdatedDate).HasColumnName("updated_date");
 
                 entity.HasOne(e => e.Patient)
                       .WithMany(p => p.Referrals)
                       .HasForeignKey(e => e.PatientId);
             });
+        }
+
+        public override async Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)
+        {
+            ApplyAuditRules();
+            return await base.SaveChangesAsync(cancellationToken);
+        }
+
+        private void ApplyAuditRules()
+        {
+            var entries = ChangeTracker
+                        .Entries()
+                        .Where(e => e.State == EntityState.Added || e.State == EntityState.Modified);
+
+            foreach (var entry in entries)
+            {
+                if (entry.State == EntityState.Added)
+                {
+                    entry.Property("CreatedDate").CurrentValue = DateTime.UtcNow;
+                    entry.Property("UpdatedDate").CurrentValue = DateTime.UtcNow;
+                }
+                if (entry.State == EntityState.Modified)
+                {
+                    entry.Property("CreatedDate").IsModified = false;
+
+                    entry.Property("UpdatedDate").CurrentValue = DateTime.UtcNow;
+                    entry.Property("UpdatedDate").IsModified = true;
+                }
+            }
         }
 
     }

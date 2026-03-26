@@ -38,6 +38,8 @@ namespace PatientReferralManagementAPI.Validators
                                 message = error.ErrorMessage;
                             }
 
+                            message = message?.Replace("'", "");
+
                             if (message == null)
                                 continue;
 
