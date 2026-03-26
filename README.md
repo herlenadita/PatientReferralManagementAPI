@@ -263,6 +263,71 @@ Body :
 
 ---
 
+## 📬 Postman Collection
+
+A Postman collection is provided to help you test all available API endpoints بسهولة.
+
+### 📥 Import Collection
+
+1. Open **Postman**
+2. Click **Import**
+3. Select the file:
+
+```
+PatientReferralManagementAPI/Data/PatientReferralManagementAPI.postman_collection.json
+```
+
+---
+
+### ▶️ Usage
+
+After importing, you can:
+
+* Run all API requests directly
+* Test endpoints without using Swagger
+* Modify request payloads easily
+
+---
+
+### 🌐 Set Base URL
+
+Make sure to update the `base_url` variable:
+
+```
+https://localhost:xxxx
+```
+
+![postman](docs/images/postman.png)
+![postman2](docs/images/postman2.png)
+
+---
+
+### 🧪 Included Endpoints
+
+#### Patient
+
+* Get all patients
+* Get patient by ID
+* Create patient
+* Update patient
+* Delete patient
+
+#### Referral
+
+* Get all referrals
+* Create referral
+
+---
+
+### ⚠️ Notes
+
+* Ensure the API is running before sending requests
+* Update environment variables if needed
+* Some endpoints may require valid data (e.g., existing `patient_id`)
+
+---
+
+
 # 🔤 JSON Naming Convention
 
 This API uses **snake_case JSON**.
@@ -317,6 +382,7 @@ This API uses **snake_case JSON**.
 # 🔄 Mapping (AutoMapper)
 
 ```csharp
+Datetime -> yyyy-MM-dd
 FullName = FirstName + " " + LastName;
 ```
 
@@ -338,25 +404,19 @@ FullName = FirstName + " " + LastName;
 
 # ⚠️ Common Issues
 
+## ❌ Empty For Required Field
+
+![validation](docs/images/validation.png)
+
 ## ❌ DateTime.Parse Error
 
-```
-"date_of_birth": "2000-01-01"
-```
+![validation2](docs/images/validation2.png)
 
 ---
 
-## ❌ Validation Failed
+## ❌ Patient Not Found
 
-```json
-{
-  "success": false,
-  "message": "Validation failed",
-  "errors": {
-    "first_name": ["First name is required"]
-  }
-}
-```
+![validatio3n](docs/images/validation3.png)
 
 ---
 
@@ -401,7 +461,6 @@ This automatically logs:
 * HTTP method
 * Endpoint
 * Status code
-* Execution time
 
 ---
 
