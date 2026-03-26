@@ -22,6 +22,7 @@ namespace PatientReferralManagementAPI.Data
                 entity.Property(e => e.LastName).HasColumnName("last_name");
                 entity.Property(e => e.DateOfBirth).HasColumnName("date_of_birth");
                 entity.Property(e => e.CreatedDate).HasColumnName("created_date");
+                entity.Property(e => e.UpdatedDate).HasColumnName("updated_date");
             });
 
             modelBuilder.Entity<Referral>(entity =>
@@ -36,6 +37,7 @@ namespace PatientReferralManagementAPI.Data
                 entity.Property(e => e.ReferralType).HasColumnName("referral_type");
                 entity.Property(e => e.ReferralNote).HasColumnName("referral_note");
                 entity.Property(e => e.CreatedDate).HasColumnName("created_date");
+                entity.Property(e => e.CreatedDate).HasColumnName("updated_date");
 
                 entity.HasOne(e => e.Patient)
                       .WithMany(p => p.Referrals)
