@@ -5,6 +5,15 @@ This project follows a **clean layered architecture** with validation, exception
 
 ---
 
+## 🚀 Tech Stack
+
+* .NET 8 Web API
+* Entity Framework Core
+* SQL Server
+* Swagger (OpenAPI)
+
+---
+
 # 🚀 Features
 
 * ✅ Patient CRUD
@@ -36,20 +45,74 @@ Controller → Service → Repository → Database
 
 ```
 PatientReferralManagementAPI/
-├── Controllers/
-├── Services/
-├── Repositories/
-├── DTO/
-├── Models/
-├── Data/
-├── Validators/
-├── Mapping/
-├── Helpers/
-├── logs/
+│
+├── Controllers/                # API endpoints (Patients, Referrals)
+│   ├── PatientsController.cs
+│   ├── ReferralsController.cs
+│
+├── Services/                  # Business logic layer
+│   ├── PatientService.cs
+│   ├── ReferralService.cs
+│
+├── Repositories/              # Data access layer
+│   ├── IPatientRepository.cs
+│   ├── IReferralRepository.cs
+│   ├── PatientRepository.cs
+│   ├── ReferralRepository.cs
+│
+├── DTO/                       # Data Transfer Objects
+│   ├── Common/
+│   │   ├── ApiResponse.cs
+│   │   ├── PagedResponse.cs
+│   │
+│   ├── Patient/
+│   │   ├── CreateUpdatePatientDto.cs
+│   │   ├── PatientResponseDto.cs
+│   │
+│   ├── Referral/
+│       ├── CreateReferralDto.cs
+│       ├── UpdateReferralDto.cs
+│       ├── ReferralResponseDto.cs
+│
+├── Models/                    # Entity models (Database)
+│   ├── Patient.cs
+│   ├── Referral.cs
+│
+├── Data/                      # Database context & SQL scripts
+│   ├── AppDbContext.cs
+│   ├── InitDb.sql
+│   ├── PatientReferralManagementAPI.postman_collection.json
+│
+├── Validators/                # Validation & Middleware
+│   ├── CreatePatientValidator.cs
+│   ├── CreateReferralValidator.cs
+│   ├── UpdateReferralValidator.cs
+│   ├── ExceptionMiddleware.cs
+│   ├── Exceptions.cs
+│   ├── ServiceExtensions.cs
+│
+├── Mapping/                   # AutoMapper configuration
+│   ├── MappingProfile.cs
+│
+├── Helpers/                   # Utility classes
+│   ├── SnakeCaseNamingPolicy.cs
+│
+├── logs/                      # Application logs
+│   ├── log-*.txt
+│
+├── appsettings.json           # Configuration
+├── Program.cs                 # Entry point
+└── PatientReferralManagementAPI.http
 
-PatientReferralManagementAPI.Tests/
+PatientReferralManagement.Test/
+│
 ├── Controllers/
+│   ├── PatientsControllerTests.cs
+│   ├── ReferralsControllerTests.cs
+│
 ├── Services/
+│   ├── PatientServiceTests.cs
+│   ├── ReferralServiceTests.cs
 ```
 
 ---
@@ -65,7 +128,42 @@ cd PatientReferralManagementAPI
 
 ---
 
-## 2. Restore Dependencies
+
+## 📦 Getting Started
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/your-username/patient-referral-api.git
+cd patient-referral-api
+```
+
+---
+
+### 2. Database Setup
+
+1. Open SQL Server Management Studio
+2. Execute:
+
+```
+PatientReferralManagementAPI/Data/InitDb.sql
+```
+
+---
+
+### 3. Configuration
+
+Update your connection string in `appsettings.json`:
+
+```json
+"ConnectionStrings": {
+  "DefaultConnection": "Server=YOUR_SERVER;Database=YOUR_DB;Trusted_Connection=True;TrustServerCertificate=True;"
+}
+```
+
+---
+
+### 4. Restore Dependencies
 
 ```bash
 dotnet restore
@@ -73,7 +171,7 @@ dotnet restore
 
 ---
 
-## 3. Build Project
+### 3. Build Project
 
 ```bash
 dotnet build
@@ -81,7 +179,7 @@ dotnet build
 
 ---
 
-## 4. Run API
+### 4. Run API
 
 ```bash
 dotnet run --project PatientReferralManagementAPI
@@ -89,12 +187,13 @@ dotnet run --project PatientReferralManagementAPI
 
 ---
 
-## 5. Open Swagger
+##$ 5. Open Swagger
 
 ```
 https://localhost:5132/swagger
 ```
-
+![swagger_patient](docs/images/swagger_patient.png)
+![swagger_patient](docs/images/swagger_referral.png)
 ---
 
 # 🧪 Unit Testing
@@ -104,71 +203,6 @@ Run all tests:
 ```bash
 dotnet test
 ```
-
----
-
-# 📜 Logging (Serilog)
-
-This project uses **Serilog** for structured logging.
-
-### Configuration
-
-Defined in `Program.cs`:
-
-```csharp
-Log.Logger = new LoggerConfiguration()
-    .MinimumLevel.Information()
-    .WriteTo.Console()
-    .WriteTo.File("logs/log-.txt", rollingInterval: RollingInterval.Day)
-    .CreateLogger();
-```
-
----
-
-## 📁 Log Output
-
-Logs are stored in:
-
-```
-logs/log-YYYY-MM-DD.txt
-```
-
----
-
-## 🔍 Request Logging
-
-HTTP request logging is enabled using:
-
-```csharp
-app.UseSerilogRequestLogging();
-```
-
-This automatically logs:
-
-* HTTP method
-* Endpoint
-* Status code
-* Execution time
-
----
-
-## 📊 Example Log
-
-```
-[INF] Now listening on: http://localhost:5132
-[INF] Request starting GET /swagger/index.html
-[INF] Request finished 200 OK
-[WRN] Failed to determine the https port for redirect.
-```
-
----
-
-## 🚀 Benefits
-
-* Easier debugging
-* Request tracing
-* File-based audit logs
-* Production-ready logging setup
 
 ---
 
@@ -323,12 +357,70 @@ FullName = FirstName + " " + LastName;
 
 ---
 
-# 🚀 Future Improvements
+# 📜 Logging (Serilog)
 
-* Integration Testing
-* Docker support
-* CI/CD pipeline
-* Authentication (JWT)
+This project uses **Serilog** for structured logging.
+
+### Configuration
+
+Defined in `Program.cs`:
+
+```csharp
+Log.Logger = new LoggerConfiguration()
+    .MinimumLevel.Information()
+    .WriteTo.Console()
+    .WriteTo.File("logs/log-.txt", rollingInterval: RollingInterval.Day)
+    .CreateLogger();
+```
+
+---
+
+## 📁 Log Output
+
+Logs are stored in:
+
+```
+logs/log-YYYY-MM-DD.txt
+```
+
+---
+
+## 🔍 Request Logging
+
+HTTP request logging is enabled using:
+
+```csharp
+app.UseSerilogRequestLogging();
+```
+
+This automatically logs:
+
+* HTTP method
+* Endpoint
+* Status code
+* Execution time
+
+---
+
+## 📊 Example Log
+
+```
+[INF] Now listening on: http://localhost:5132
+[INF] Request starting GET /swagger/index.html
+[INF] Request finished 200 OK
+[WRN] Failed to determine the https port for redirect.
+```
+
+---
+
+## 🚀 Benefits
+
+* Easier debugging
+* Request tracing
+* File-based audit logs
+* Production-ready logging setup
+
+---
 
 ---
 
