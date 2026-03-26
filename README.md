@@ -302,23 +302,6 @@ https://localhost:xxxx
 
 ---
 
-### 🧪 Included Endpoints
-
-#### Patient
-
-* Get all patients
-* Get patient by ID
-* Create patient
-* Update patient
-* Delete patient
-
-#### Referral
-
-* Get all referrals
-* Create referral
-
----
-
 ### ⚠️ Notes
 
 * Ensure the API is running before sending requests
