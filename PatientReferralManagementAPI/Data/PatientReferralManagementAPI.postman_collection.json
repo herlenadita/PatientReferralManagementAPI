@@ -1,0 +1,949 @@
+{
+  "info": {
+    "_postman_id": "af07a7eb-adab-4ae6-864f-0a01e146bb75",
+    "name": "PatientReferralManagementAPI",
+    "description": "This collection contains the core REST requests for the **Patient Referral Management API**. It’s organized around two main resources—**patients** and **referrals**—and provides a complete set of endpoints to create, retrieve, update, delete, and list these resources.\n\n**What you can do with this collection**\n\n- **Patients**\n    \n    - Create a patient (`POST /api/patients`)\n        \n    - List patients (`GET /api/patients`)\n        \n    - Get, update, and delete a specific patient (`GET/PUT/DELETE /api/patients/:id`)\n        \n    - Retrieve referrals for a patient (`GET /api/patients/:id/referrals`)\n        \n- **Referrals**\n    \n    - Create a referral (`POST /api/referrals`)\n        \n    - List referrals with pagination (`GET /api/referrals?page=1&size=10`)\n        \n    - Get, update, and delete a specific referral (`GET/PUT/DELETE /api/referrals/:id`)\n        \n\n**How it’s structured**\n\n- Requests are grouped under an `api` folder, then split into `patients` and `referrals`, with nested `{id}` subfolders for operations on specific resources.\n    \n\n**Configuration**\n\n- All requests use the `{{baseUrl}}` environment variable so the same collection can be run against different environments (e.g., dev/prod) by switching environments.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "53735"
+  },
+  "item": [
+    {
+      "name": "api",
+      "item": [
+        {
+          "name": "patients",
+          "item": [
+            {
+              "name": "{id}",
+              "item": [
+                {
+                  "name": "referrals",
+                  "item": [
+                    {
+                      "name": "/api/patients/:id/referrals",
+                      "request": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "Accept",
+                            "value": "text/plain"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/api/patients/:id/referrals?page=1&size=10",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "api",
+                            "patients",
+                            ":id",
+                            "referrals"
+                          ],
+                          "query": [
+                            {
+                              "key": "page",
+                              "value": "1"
+                            },
+                            {
+                              "key": "size",
+                              "value": "10"
+                            }
+                          ],
+                          "variable": [
+                            {
+                              "key": "id",
+                              "value": "4992"
+                            }
+                          ]
+                        }
+                      },
+                      "response": [
+                        {
+                          "name": "OK",
+                          "originalRequest": {
+                            "method": "GET",
+                            "header": [
+                              {
+                                "key": "Accept",
+                                "value": "text/plain"
+                              }
+                            ],
+                            "url": {
+                              "raw": "{{baseUrl}}/api/patients/:id/referrals?page=1&size=10",
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "path": [
+                                "api",
+                                "patients",
+                                ":id",
+                                "referrals"
+                              ],
+                              "query": [
+                                {
+                                  "key": "page",
+                                  "value": "1"
+                                },
+                                {
+                                  "key": "size",
+                                  "value": "10"
+                                }
+                              ],
+                              "variable": [
+                                {
+                                  "key": "id",
+                                  "value": "4992"
+                                }
+                              ]
+                            }
+                          },
+                          "status": "OK",
+                          "code": 200,
+                          "_postman_previewlanguage": "json",
+                          "header": [
+                            {
+                              "key": "Content-Type",
+                              "value": "application/json"
+                            }
+                          ],
+                          "cookie": [],
+                          "body": "{\n  \"success\": false,\n  \"message\": \"string\",\n  \"data\": {\n    \"data\": [\n      {\n        \"referral_id\": 9136,\n        \"patient_id\": 446,\n        \"referral_source\": \"string\",\n        \"referral_type\": \"string\",\n        \"referral_note\": \"string\"\n      },\n      {\n        \"referral_id\": 9882,\n        \"patient_id\": 6246,\n        \"referral_source\": \"string\",\n        \"referral_type\": \"string\",\n        \"referral_note\": \"string\"\n      }\n    ],\n    \"page\": 702,\n    \"size\": 4977,\n    \"total\": 2267\n  },\n  \"errors\": \"\"\n}"
+                        }
+                      ]
+                    }
+                  ],
+                  "description": "- `GET /api/referrals` (paged list)\n    \n- `POST /api/referrals` (create)\n    \n- `GET /api/referrals/:id`, `PUT /api/referrals/:id`, `DELETE /api/referrals/:id` (retrieve/update/delete)"
+                },
+                {
+                  "name": "/api/patients/:id",
+                  "request": {
+                    "method": "PUT",
+                    "header": [
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      },
+                      {
+                        "key": "Accept",
+                        "value": "text/plain"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\n  \"first_name\": \"string\",\n  \"last_name\": \"string\",\n  \"date_of_birth\": \"string\"\n}",
+                      "options": {
+                        "raw": {
+                          "headerFamily": "json",
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{baseUrl}}/api/patients/:id",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "api",
+                        "patients",
+                        ":id"
+                      ],
+                      "variable": [
+                        {
+                          "key": "id",
+                          "value": "4992"
+                        }
+                      ]
+                    }
+                  },
+                  "response": [
+                    {
+                      "name": "OK",
+                      "originalRequest": {
+                        "method": "PUT",
+                        "header": [
+                          {
+                            "key": "Content-Type",
+                            "value": "application/json"
+                          },
+                          {
+                            "key": "Accept",
+                            "value": "text/plain"
+                          }
+                        ],
+                        "body": {
+                          "mode": "raw",
+                          "raw": "{\n  \"first_name\": \"string\",\n  \"last_name\": \"string\",\n  \"date_of_birth\": \"string\"\n}",
+                          "options": {
+                            "raw": {
+                              "headerFamily": "json",
+                              "language": "json"
+                            }
+                          }
+                        },
+                        "url": {
+                          "raw": "{{baseUrl}}/api/patients/:id",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "api",
+                            "patients",
+                            ":id"
+                          ],
+                          "variable": [
+                            {
+                              "key": "id",
+                              "value": "4992"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "json",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "application/json"
+                        }
+                      ],
+                      "cookie": [],
+                      "body": "{\n  \"success\": false,\n  \"message\": \"string\",\n  \"data\": {\n    \"patient_id\": 8579,\n    \"first_name\": \"string\",\n    \"last_name\": \"string\",\n    \"full_name\": \"string\",\n    \"date_of_birth\": \"string\"\n  },\n  \"errors\": \"\"\n}"
+                    }
+                  ]
+                },
+                {
+                  "name": "/api/patients/:id",
+                  "request": {
+                    "method": "DELETE",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "text/plain"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/api/patients/:id",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "api",
+                        "patients",
+                        ":id"
+                      ],
+                      "variable": [
+                        {
+                          "key": "id",
+                          "value": "4992"
+                        }
+                      ]
+                    }
+                  },
+                  "response": [
+                    {
+                      "name": "OK",
+                      "originalRequest": {
+                        "method": "DELETE",
+                        "header": [
+                          {
+                            "key": "Accept",
+                            "value": "text/plain"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/api/patients/:id",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "api",
+                            "patients",
+                            ":id"
+                          ],
+                          "variable": [
+                            {
+                              "key": "id",
+                              "value": "4992"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "json",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "application/json"
+                        }
+                      ],
+                      "cookie": [],
+                      "body": "{\n  \"success\": false,\n  \"message\": \"string\",\n  \"data\": \"string\",\n  \"errors\": \"\"\n}"
+                    }
+                  ]
+                },
+                {
+                  "name": "/api/patients/:id",
+                  "request": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "text/plain"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/api/patients/:id",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "api",
+                        "patients",
+                        ":id"
+                      ],
+                      "variable": [
+                        {
+                          "key": "id",
+                          "value": "4992"
+                        }
+                      ]
+                    }
+                  },
+                  "response": [
+                    {
+                      "name": "OK",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "Accept",
+                            "value": "text/plain"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/api/patients/:id",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "api",
+                            "patients",
+                            ":id"
+                          ],
+                          "variable": [
+                            {
+                              "key": "id",
+                              "value": "4992"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "json",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "application/json"
+                        }
+                      ],
+                      "cookie": [],
+                      "body": "{\n  \"success\": false,\n  \"message\": \"string\",\n  \"data\": {\n    \"patient_id\": 8579,\n    \"first_name\": \"string\",\n    \"last_name\": \"string\",\n    \"full_name\": \"string\",\n    \"date_of_birth\": \"string\"\n  },\n  \"errors\": \"\"\n}"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "/api/patients",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "text/plain"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"first_name\": \"string\",\n  \"last_name\": \"string\",\n  \"date_of_birth\": \"string\"\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/api/patients",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "api",
+                    "patients"
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "name": "Created",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      },
+                      {
+                        "key": "Accept",
+                        "value": "text/plain"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\n  \"first_name\": \"string\",\n  \"last_name\": \"string\",\n  \"date_of_birth\": \"string\"\n}",
+                      "options": {
+                        "raw": {
+                          "headerFamily": "json",
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{baseUrl}}/api/patients",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "api",
+                        "patients"
+                      ]
+                    }
+                  },
+                  "status": "Created",
+                  "code": 201,
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": "{\n  \"success\": false,\n  \"message\": \"string\",\n  \"data\": {\n    \"patient_id\": 8579,\n    \"first_name\": \"string\",\n    \"last_name\": \"string\",\n    \"full_name\": \"string\",\n    \"date_of_birth\": \"string\"\n  },\n  \"errors\": \"\"\n}"
+                }
+              ]
+            },
+            {
+              "name": "/api/patients",
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "text/plain"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/api/patients?page=1&size=10",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "api",
+                    "patients"
+                  ],
+                  "query": [
+                    {
+                      "key": "page",
+                      "value": "1"
+                    },
+                    {
+                      "key": "size",
+                      "value": "10"
+                    }
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "name": "OK",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "text/plain"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/api/patients?page=1&size=10",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "api",
+                        "patients"
+                      ],
+                      "query": [
+                        {
+                          "key": "page",
+                          "value": "1"
+                        },
+                        {
+                          "key": "size",
+                          "value": "10"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": "{\n  \"success\": true,\n  \"message\": \"string\",\n  \"data\": {\n    \"data\": [\n      {\n        \"patient_id\": 1195,\n        \"first_name\": \"string\",\n        \"last_name\": \"string\",\n        \"full_name\": \"string\",\n        \"date_of_birth\": \"string\"\n      },\n      {\n        \"patient_id\": 5969,\n        \"first_name\": \"string\",\n        \"last_name\": \"string\",\n        \"full_name\": \"string\",\n        \"date_of_birth\": \"string\"\n      }\n    ],\n    \"page\": 3666,\n    \"size\": 577,\n    \"total\": 3123\n  },\n  \"errors\": \"\"\n}"
+                }
+              ]
+            }
+          ],
+          "description": "- `GET /api/patients` (paged list)\n    \n- `POST /api/patients` (create)\n    \n- `GET /api/patients/:id`, `PUT /api/patients/:id`, `DELETE /api/patients/:id` (retrieve/update/delete)"
+        },
+        {
+          "name": "referrals",
+          "item": [
+            {
+              "name": "{id}",
+              "item": [
+                {
+                  "name": "/api/referrals/:id",
+                  "request": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "text/plain"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/api/referrals/:id",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "api",
+                        "referrals",
+                        ":id"
+                      ],
+                      "variable": [
+                        {
+                          "key": "id",
+                          "value": "4992"
+                        }
+                      ]
+                    }
+                  },
+                  "response": [
+                    {
+                      "name": "OK",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "Accept",
+                            "value": "text/plain"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/api/referrals/:id",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "api",
+                            "referrals",
+                            ":id"
+                          ],
+                          "variable": [
+                            {
+                              "key": "id",
+                              "value": "4992"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "json",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "application/json"
+                        }
+                      ],
+                      "cookie": [],
+                      "body": "{\n  \"success\": false,\n  \"message\": \"string\",\n  \"data\": {\n    \"referral_id\": 7635,\n    \"patient_id\": 3466,\n    \"referral_source\": \"string\",\n    \"referral_type\": \"string\",\n    \"referral_note\": \"string\"\n  },\n  \"errors\": \"\"\n}"
+                    }
+                  ]
+                },
+                {
+                  "name": "/api/referrals/:id",
+                  "request": {
+                    "method": "PUT",
+                    "header": [
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      },
+                      {
+                        "key": "Accept",
+                        "value": "text/plain"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\n  \"referral_source\": \"string\",\n  \"referral_type\": \"string\",\n  \"referral_note\": \"string\"\n}",
+                      "options": {
+                        "raw": {
+                          "headerFamily": "json",
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{baseUrl}}/api/referrals/:id",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "api",
+                        "referrals",
+                        ":id"
+                      ],
+                      "variable": [
+                        {
+                          "key": "id",
+                          "value": "4992"
+                        }
+                      ]
+                    }
+                  },
+                  "response": [
+                    {
+                      "name": "OK",
+                      "originalRequest": {
+                        "method": "PUT",
+                        "header": [
+                          {
+                            "key": "Content-Type",
+                            "value": "application/json"
+                          },
+                          {
+                            "key": "Accept",
+                            "value": "text/plain"
+                          }
+                        ],
+                        "body": {
+                          "mode": "raw",
+                          "raw": "{\n  \"referral_source\": \"string\",\n  \"referral_type\": \"string\",\n  \"referral_note\": \"string\"\n}",
+                          "options": {
+                            "raw": {
+                              "headerFamily": "json",
+                              "language": "json"
+                            }
+                          }
+                        },
+                        "url": {
+                          "raw": "{{baseUrl}}/api/referrals/:id",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "api",
+                            "referrals",
+                            ":id"
+                          ],
+                          "variable": [
+                            {
+                              "key": "id",
+                              "value": "4992"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "json",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "application/json"
+                        }
+                      ],
+                      "cookie": [],
+                      "body": "{\n  \"success\": false,\n  \"message\": \"string\",\n  \"data\": {\n    \"referral_id\": 7635,\n    \"patient_id\": 3466,\n    \"referral_source\": \"string\",\n    \"referral_type\": \"string\",\n    \"referral_note\": \"string\"\n  },\n  \"errors\": \"\"\n}"
+                    }
+                  ]
+                },
+                {
+                  "name": "/api/referrals/:id",
+                  "request": {
+                    "method": "DELETE",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "text/plain"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/api/referrals/:id",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "api",
+                        "referrals",
+                        ":id"
+                      ],
+                      "variable": [
+                        {
+                          "key": "id",
+                          "value": "4992"
+                        }
+                      ]
+                    }
+                  },
+                  "response": [
+                    {
+                      "name": "OK",
+                      "originalRequest": {
+                        "method": "DELETE",
+                        "header": [
+                          {
+                            "key": "Accept",
+                            "value": "text/plain"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/api/referrals/:id",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "api",
+                            "referrals",
+                            ":id"
+                          ],
+                          "variable": [
+                            {
+                              "key": "id",
+                              "value": "4992"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "json",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "application/json"
+                        }
+                      ],
+                      "cookie": [],
+                      "body": "{\n  \"success\": false,\n  \"message\": \"string\",\n  \"data\": \"string\",\n  \"errors\": \"\"\n}"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "/api/referrals",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "text/plain"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"patient_id\": 23,\n  \"referral_source\": \"string\",\n  \"referral_type\": \"string\",\n  \"referral_note\": \"string\"\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/api/referrals",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "api",
+                    "referrals"
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "name": "Created",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      },
+                      {
+                        "key": "Accept",
+                        "value": "text/plain"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\n  \"patient_id\": 23,\n  \"referral_source\": \"string\",\n  \"referral_type\": \"string\",\n  \"referral_note\": \"string\"\n}",
+                      "options": {
+                        "raw": {
+                          "headerFamily": "json",
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{baseUrl}}/api/referrals",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "api",
+                        "referrals"
+                      ]
+                    }
+                  },
+                  "status": "Created",
+                  "code": 201,
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": "{\n  \"success\": false,\n  \"message\": \"string\",\n  \"data\": {\n    \"referral_id\": 7635,\n    \"patient_id\": 3466,\n    \"referral_source\": \"string\",\n    \"referral_type\": \"string\",\n    \"referral_note\": \"string\"\n  },\n  \"errors\": \"\"\n}"
+                }
+              ]
+            },
+            {
+              "name": "/api/referrals",
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "text/plain"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/api/referrals?page=1&size=10",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "api",
+                    "referrals"
+                  ],
+                  "query": [
+                    {
+                      "key": "page",
+                      "value": "1"
+                    },
+                    {
+                      "key": "size",
+                      "value": "10"
+                    }
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "name": "OK",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "text/plain"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/api/referrals?page=1&size=10",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "api",
+                        "referrals"
+                      ],
+                      "query": [
+                        {
+                          "key": "page",
+                          "value": "1"
+                        },
+                        {
+                          "key": "size",
+                          "value": "10"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": "{\n  \"success\": false,\n  \"message\": \"string\",\n  \"data\": {\n    \"data\": [\n      {\n        \"referral_id\": 9136,\n        \"patient_id\": 446,\n        \"referral_source\": \"string\",\n        \"referral_type\": \"string\",\n        \"referral_note\": \"string\"\n      },\n      {\n        \"referral_id\": 9882,\n        \"patient_id\": 6246,\n        \"referral_source\": \"string\",\n        \"referral_type\": \"string\",\n        \"referral_note\": \"string\"\n      }\n    ],\n    \"page\": 702,\n    \"size\": 4977,\n    \"total\": 2267\n  },\n  \"errors\": \"\"\n}"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "description": "This folder contains the core REST endpoints for the **Patient Referral Management API**, organized by resource."
+    }
+  ],
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "/"
+    }
+  ]
+}

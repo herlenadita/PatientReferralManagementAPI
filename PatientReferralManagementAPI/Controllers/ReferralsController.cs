@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using PatientReferralManagementAPI.DTO.Common;
+using PatientReferralManagementAPI.DTO.Patient;
 using PatientReferralManagementAPI.DTO.Referral;
 using PatientReferralManagementAPI.Services;
 
@@ -18,6 +19,7 @@ namespace PatientReferralManagementAPI.Controllers
 
         // CREATE
         [HttpPost]
+        [ProducesResponseType(typeof(ApiResponse<ReferralResponseDto>), 201)]
         public async Task<IActionResult> Create(CreateReferralDto dto)
         {
             var result = await _service.CreateAsync(dto);
@@ -32,6 +34,7 @@ namespace PatientReferralManagementAPI.Controllers
 
         // GET BY ID
         [HttpGet("{id}")]
+        [ProducesResponseType(typeof(ApiResponse<ReferralResponseDto>), 200)]
         public async Task<IActionResult> GetById(int id)
         {
             var result = await _service.GetByIdAsync(id);
@@ -46,6 +49,7 @@ namespace PatientReferralManagementAPI.Controllers
 
         // GET ALL 
         [HttpGet]
+        [ProducesResponseType(typeof(ApiResponse<PagedResponse<ReferralResponseDto>>), 200)]
         public async Task<IActionResult> GetAll(int page = 1, int size = 10)
         {
             var result = await _service.GetAllAsync(page, size);
@@ -60,6 +64,7 @@ namespace PatientReferralManagementAPI.Controllers
 
         // UPDATE
         [HttpPut("{id}")]
+        [ProducesResponseType(typeof(ApiResponse<ReferralResponseDto>), 200)]
         public async Task<IActionResult> Update(int id, UpdateReferralDto dto)
         {
             var result = await _service.UpdateAsync(id, dto);
@@ -74,6 +79,7 @@ namespace PatientReferralManagementAPI.Controllers
 
         // DELETE
         [HttpDelete("{id}")]
+        [ProducesResponseType(typeof(ApiResponse<string>), 200)]
         public async Task<IActionResult> Delete(int id)
         {
             await _service.DeleteAsync(id);

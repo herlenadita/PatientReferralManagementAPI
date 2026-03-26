@@ -21,6 +21,7 @@ namespace PatientReferralManagementAPI.Controllers
 
         // CREATE PATIENT
         [HttpPost]
+        [ProducesResponseType(typeof(ApiResponse<PatientResponseDto>), 201)]
         public async Task<IActionResult> Create(CreateUpdatePatientDto dto)
         {
             var result = await _service.CreateAsync(dto);
@@ -36,6 +37,7 @@ namespace PatientReferralManagementAPI.Controllers
 
         // UPDATE PATIENT
         [HttpPut("{id}")]
+        [ProducesResponseType(typeof(ApiResponse<PatientResponseDto>), 200)]
         public async Task<IActionResult> Update(int id, CreateUpdatePatientDto dto)
         {
             var result = await _service.UpdateAsync(id, dto);
@@ -50,6 +52,7 @@ namespace PatientReferralManagementAPI.Controllers
 
         //DELETE PATIENT
         [HttpDelete("{id}")]
+        [ProducesResponseType(typeof(ApiResponse<string>), 200)]
         public async Task<IActionResult> Delete(int id)
         {
             await _service.DeleteAsync(id);
@@ -64,6 +67,7 @@ namespace PatientReferralManagementAPI.Controllers
 
         // GET ALL (WITH PAGINATION)
         [HttpGet]
+        [ProducesResponseType(typeof(ApiResponse<PagedResponse<PatientResponseDto>>), 200)]
         public async Task<IActionResult> GetAll(int page = 1, int size = 10)
         {
             var result = await _service.GetAllAsync(page, size);
@@ -78,6 +82,7 @@ namespace PatientReferralManagementAPI.Controllers
 
         // GET BY ID
         [HttpGet("{id}")]
+        [ProducesResponseType(typeof(ApiResponse<PatientResponseDto>), 200)]
         public async Task<IActionResult> GetById(int id)
         {
             var result = await _service.GetByIdAsync(id);
@@ -91,6 +96,7 @@ namespace PatientReferralManagementAPI.Controllers
         }
 
         [HttpGet("{id}/referrals")]
+        [ProducesResponseType(typeof(ApiResponse<PagedResponse<ReferralResponseDto>>), 200)]
         public async Task<IActionResult> GetReferralsByPatient(int id, int page = 1, int size = 10)
         {
             var result = await _referralService.GetByPatientIdAsync(id, page, size);
