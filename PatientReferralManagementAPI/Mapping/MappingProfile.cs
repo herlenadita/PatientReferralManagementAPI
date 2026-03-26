@@ -10,7 +10,9 @@ namespace PatientReferralManagementAPI.Mapping
         {
             CreateMap<Patient, PatientResponseDto>()
                 .ForMember(dest => dest.FullName,
-                    opt => opt.MapFrom(src => src.FirstName + " " + src.LastName));
+                    opt => opt.MapFrom(src => src.FirstName + " " + src.LastName))
+                .ForMember(dest => dest.DateOfBirth,
+                    opt => opt.MapFrom(src => src.DateOfBirth.ToString("yyyy-MM-dd")));
 
             CreateMap<Referral, ReferralResponseDto>();
 
